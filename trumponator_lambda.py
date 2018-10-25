@@ -1,10 +1,14 @@
-import fasttext
+#import fasttext
 import json
 
 model = None
 
 """
 def read_model():
+	global model
+	model = fasttext.load_model('model.bin', encoding='utf-8')
+	
+	#teach a model from data
 	model = fasttext.supervised('train.txt', 'model', lr='0.5', epoch=100)
 	
 def predict(tweet):
